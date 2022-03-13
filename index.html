@@ -1,51 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
   <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA_Compatible" content="ie=edge">
+  <title>Climate-Dashboard</title>
+
+   <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen">
+  <!-- Bring in my own stylesheet -->
+  <link rel="stylesheet" href="WebDashStyle.css" media="screen">
+
 </head>
 
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid navbar-custom">
 
-  <h1>Your Name</h1>
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="col-xs-9 phone-nav">
+            <a class="navbar-brand" href="index.html" id="landing-btn">Latitude</a>
+          </div>
+        </div>  <!-- navbar-header -->
 
-  <img src="https://placehold.it/200x200" alt="Your Name">
+        <!-- Collect the navigation links, forms and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right"navbar-right-custom> 
+            </li> 
+            <li><a href="Comparison.html">Comparison</a></li>
+            <li><a href="Data.html">Data</a></li>        
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="MaxTemperature.html">Max Temperature</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="Humidity.html">Humidity</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="Cloudiness.html">Cloudiness</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="WindSpeed.html">Wind Speed</a></li>
+            </ul>
+            <li><a href="">    </a></li> 
+          </ul>
+        </div>    <!-- /.navbar-collapse -->
+    </div> <!-- /.container-fluid -->
+  </nav>
 
-  <p>Write a short paragraph about yourself or some placeholder text.</p>
-  <p>A second short paragraph about yourself or some placeholder text.</p>
+  <div class="container">
+    <section class="row">
+      <div class="col-sm-8">
+        <article class="description-content">
+          <h1 class="description-header">Summary: Latitude vs. X</h1>
+          <hr class="description-hr"/>
+          <img src="Resources/assets/images/MaxTemperature.png" alt="" id="description-image"/>
+          <p>The purpose of this project was to analyze how the weather 
+            changes as you get loser to the equator. To accomplish this
+            analysis, first, the data was pulled from the OpenWeather Map API
+            to create a dataset on over 500 cities.</p>
+          <p>After assembling the dataset, Matplotlib Python library was used to plot various
+            aspects of the weather vs, latitude. Factors observed included: max temperature, humidity, 
+            cloudines, and wind speed. This site provides the source data ad visualizations created
+            as part of the analysis, as well as explanations and descriptions of any trends and
+            correlations observed.</p>
+        </article> <!-- article -->
+      </div> <!-- col-sm-8 -->
 
-  <ul>
-    <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
-    <li><strong>Github:</strong> <a href="#">sampleName</a></li>
-    <li><strong>Twitter:</strong> <a href="#">coming soon</a></li>
-  </ul>
+      <div class="col-sm-4"
+        <!-- Visualizations imageNav area -->
+        <article id="imageNav-area">
+          <div class="imageNav-content">
+            <h2 class="imageNav-header">Visualizations</h2>
+            <hr />
+            <div id="images">
+                <a href="MaxTemperature.html"><img src="Resources/assets/images/MaxTemperature.png" class="imageNav-photo"></a>
+                <a href="Humidity.html"><img src="Resources/assets/images/Humidity.png" class="imageNav-photo"></a>
+                <a href="Cloudiness.html"><img src="Resources/assets/images/Cloudiness.png" class="imageNav-photo"></a>
+                <a href="WindSpeed.html"><img src="Resources/assets/images/WindSpeed.png" class="imageNav-photo"></a> 
+            </div>
+          </div>  <!-- imageNav content -->
+        </article>  <!-- imageNav-area -->
+        <!-- End of Visualization imageNav area -->
+      </div>  
+    </section> <!-- row  -->
+  </div> <!-- End of the container -->
 
-  <table>
-    <tr>
-      <th>Books</th>
-      <th>Movies</th>
-      <th>Games</th>
-    </tr>
-    <tr>
-      <td>The Hobbit</td>
-      <td>Hot Fuzz</td>
-      <td>Dark Souls</td>
-    </tr>
-    <tr>
-      <td>The Name of the Wind</td>
-      <td>The Avengers</td>
-      <td>The Last of Us</td>
-    </tr>
-    <tr>
-      <td>The Girl With All the Gifts</td>
-      <td>The Matrix</td>
-      <td>Dragon Age: Origins</td>
-    </tr>
-  </table>
+  <!-- jQuery CDN -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-  <!-- Bonus link to last class page -->
-  <a href="../../../../1/Activities/04-Stu_MyFirst_HTML/Solved/my-first-bonus.html">My First HTML Bonus</a>
-
+  <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 
 </html>
